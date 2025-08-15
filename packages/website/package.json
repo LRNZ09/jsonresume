@@ -1,24 +1,24 @@
 {
-  "name": "@lrnz09/jsonresume-website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev --turbopack",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "15.4.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "4.1.12",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tailwindcss": "4.1.12",
-    "typescript": "5.9.2"
-  }
+	"name": "@lrnz09/jsonresume-website",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev --turbopack",
+		"lint": "next lint",
+		"start": "next start"
+	},
+	"dependencies": {
+		"next": "catalog:dependencies",
+		"react": "catalog:dependencies",
+		"react-dom": "catalog:dependencies",
+		"tailwindcss": "catalog:dependencies"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "catalog:devDependencies",
+		"@types/node": "catalog:devDependencies",
+		"@types/react": "catalog:devDependencies",
+		"@types/react-dom": "catalog:devDependencies",
+		"typescript": "catalog:devDependencies"
+	}
 }

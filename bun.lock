@@ -8,34 +8,51 @@
       "name": "@lrnz09/jsonresume-theme",
       "version": "0.1.0",
       "dependencies": {
-        "bun-plugin-tailwind": "0.0.15",
-        "react": "^19",
-        "react-dom": "^19",
-        "tailwindcss": "4.1.12",
+        "bun-plugin-tailwind": "catalog:dependencies",
+        "react": "catalog:dependencies",
+        "react-dom": "catalog:dependencies",
+        "tailwindcss": "catalog:dependencies",
       },
       "devDependencies": {
-        "@types/bun": "latest",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "typescript": "5.9.2",
+        "@types/bun": "catalog:devDependencies",
+        "@types/react": "catalog:devDependencies",
+        "@types/react-dom": "catalog:devDependencies",
+        "typescript": "catalog:devDependencies",
       },
     },
     "packages/website": {
       "name": "@lrnz09/jsonresume-website",
       "version": "0.1.0",
       "dependencies": {
-        "next": "15.4.6",
-        "react": "19.1.0",
-        "react-dom": "19.1.0",
+        "next": "catalog:dependencies",
+        "react": "catalog:dependencies",
+        "react-dom": "catalog:dependencies",
+        "tailwindcss": "catalog:dependencies",
       },
       "devDependencies": {
-        "@tailwindcss/postcss": "4.1.12",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "tailwindcss": "4.1.12",
-        "typescript": "5.9.2",
+        "@tailwindcss/postcss": "catalog:devDependencies",
+        "@types/node": "catalog:devDependencies",
+        "@types/react": "catalog:devDependencies",
+        "@types/react-dom": "catalog:devDependencies",
+        "typescript": "catalog:devDependencies",
       },
+    },
+  },
+  "catalogs": {
+    "dependencies": {
+      "bun-plugin-tailwind": "0.0.15",
+      "next": "15.4.6",
+      "react": "19.1.1",
+      "react-dom": "19.1.1",
+      "tailwindcss": "4.1.12",
+    },
+    "devDependencies": {
+      "@tailwindcss/postcss": "4.1.12",
+      "@types/bun": "latest",
+      "@types/node": "^20",
+      "@types/react": "^19",
+      "@types/react-dom": "^19",
+      "typescript": "5.9.2",
     },
   },
   "packages": {
@@ -258,10 +275,6 @@
     "undici-types": ["undici-types@6.21.0", "", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
 
     "yallist": ["yallist@5.0.0", "", {}, "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw=="],
-
-    "@lrnz09/jsonresume-website/react": ["react@19.1.0", "", {}, "sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg=="],
-
-    "@lrnz09/jsonresume-website/react-dom": ["react-dom@19.1.0", "", { "dependencies": { "scheduler": "^0.26.0" }, "peerDependencies": { "react": "^19.1.0" } }, "sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g=="],
 
     "@tailwindcss/oxide-wasm32-wasi/@emnapi/core": ["@emnapi/core@1.4.5", "", { "dependencies": { "@emnapi/wasi-threads": "1.0.4", "tslib": "^2.4.0" }, "bundled": true }, "sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q=="],
 
