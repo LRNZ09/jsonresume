@@ -1,12 +1,12 @@
 import type React from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { SidebarSection } from './ui/sidebar-section'
+import type { Language } from '#/types/resume'
 
 interface LanguagesProps {
-	languages: any //ResumeSchema['languages']
+	languages: Language[]
 }
 
-export const Languages: React.FC<LanguagesProps> = ({ languages }) => {
+export const LanguagesSection: React.FC<LanguagesProps> = ({ languages }) => {
 	if (!languages?.length) return null
 
 	return (

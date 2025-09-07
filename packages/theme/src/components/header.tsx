@@ -1,12 +1,12 @@
 import { type FC, memo } from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { Summary } from './summary'
 import { ContactInfo } from './ui/contact-info'
 import { SocialProfiles } from './ui/social-profiles'
 import { HouseLineIcon } from '@phosphor-icons/react'
+import type { Basics } from '#/types/resume'
 
 interface HeaderProps {
-	basics: any //NonNullable<ResumeSchema['basics']>
+	basics: Basics
 }
 
 export const Header: FC<HeaderProps> = memo(({ basics }) => {

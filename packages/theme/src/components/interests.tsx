@@ -1,14 +1,14 @@
 import type { FC } from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { SidebarSection } from './ui/sidebar-section'
 import { Tag } from './ui/tag'
 import { TagList } from './ui/tag-list'
+import type { Interest } from '#/types/resume'
 
 interface InterestsProps {
-	interests?: any //ResumeSchema['interests']
+	interests?: Interest[]
 }
 
-export const Interests: FC<InterestsProps> = ({ interests }) => {
+export const InterestsSection: FC<InterestsProps> = ({ interests }) => {
 	if (!interests?.length) {
 		return null
 	}

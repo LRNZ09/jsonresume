@@ -2,13 +2,13 @@ import type React from 'react'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
+import type { Project } from '#/types/resume'
 
-type Project = any //NonNullable<ResumeSchema['projects']>[number]
 interface ProjectsProps {
 	projects?: Project[]
 }
 
-export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+export const ProjectsSection: React.FC<ProjectsProps> = ({ projects }) => {
 	if (!projects?.length) return null
 
 	return (

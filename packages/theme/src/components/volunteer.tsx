@@ -1,16 +1,14 @@
 import type { FC } from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
-
-type Volunteer = any //NonNullable<ResumeSchema['volunteer']>[number]
+import type { Volunteer } from '#/types/resume'
 
 interface VolunteerProps {
 	volunteer?: Volunteer[]
 }
 
-export const Volunteer: FC<VolunteerProps> = ({ volunteer }) => {
+export const VolunteerSection: FC<VolunteerProps> = ({ volunteer }) => {
 	if (!volunteer?.length) return null
 
 	return (

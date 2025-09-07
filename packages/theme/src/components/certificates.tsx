@@ -1,17 +1,17 @@
 import type React from 'react'
 import { useFormatter, useTranslations } from 'use-intl'
-// // import type { ResumeSchema } from '../types/resumeSchema'
 import { SidebarCard } from './ui/sidebar-card'
 import { SidebarSection } from './ui/sidebar-section'
 import { CertificateIcon } from '@phosphor-icons/react'
-
-type Certificate = any //NonNullable<ResumeSchema['certificates']>[number]
+import type { Certificate } from '#/types/resume'
 
 interface CertificatesProps {
 	certificates?: Certificate[]
 }
 
-export const Certificates: React.FC<CertificatesProps> = ({ certificates }) => {
+export const CertificatesSection: React.FC<CertificatesProps> = ({
+	certificates,
+}) => {
 	const f = useFormatter()
 	const t = useTranslations()
 

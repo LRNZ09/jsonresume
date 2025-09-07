@@ -1,17 +1,15 @@
 import type React from 'react'
 import { useFormatter, useTranslations } from 'use-intl'
-// // import type { ResumeSchema } from '../types/resumeSchema'
 import { SidebarCard } from './ui/sidebar-card'
 import { SidebarSection } from './ui/sidebar-section'
 import { TrophyIcon } from '@phosphor-icons/react'
-
-type Award = any // NonNullable<ResumeSchema['awards']>[number]
+import type { Award } from '#/types/resume'
 
 interface AwardsProps {
 	awards?: Award[]
 }
 
-export const Awards: React.FC<AwardsProps> = ({ awards }) => {
+export const AwardsSection: React.FC<AwardsProps> = ({ awards }) => {
 	const f = useFormatter()
 	const t = useTranslations()
 

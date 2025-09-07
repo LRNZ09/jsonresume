@@ -1,10 +1,10 @@
 import { type FC, memo } from 'react'
 import { useTranslations } from 'use-intl'
-// import type { ResumeSchema } from '../../types/resumeSchema'
 import { NetworkIcon } from './network-icon'
+import type { Basics } from '#/types/resume'
 
 interface SocialProfilesProps {
-	profiles?: any //NonNullable<ResumeSchema['basics']>['profiles']
+	profiles?: Basics['profiles']
 }
 
 export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {

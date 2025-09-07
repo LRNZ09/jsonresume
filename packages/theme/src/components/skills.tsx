@@ -1,15 +1,15 @@
 import type React from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { SidebarSection } from './ui/sidebar-section'
 import { Tag } from './ui/tag'
 import { TagList } from './ui/tag-list'
+import type { Skill } from '#/types/resume'
 
 interface SkillsProps {
-	skills: any //ResumeSchema['skills']
+	skills: Skill[]
 }
 
-export const Skills: React.FC<SkillsProps> = ({ skills }) => {
-	if (!skills?.length) return null
+export const SkillsSection: React.FC<SkillsProps> = ({ skills }) => {
+	if (!skills.length) return null
 
 	return (
 		<SidebarSection

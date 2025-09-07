@@ -1,18 +1,18 @@
 import type { FC } from 'react'
-// import type { ResumeSchema } from '../types/resumeSchema'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
+import type { Work } from '#/types/resume'
 
-type Work = any //NonNullable<ResumeSchema['work']>[number] & {
-// 	keywords?: string[]
-// }
-
-interface WorkExperienceProps {
-	work?: Work[]
+interface WorkWithKeywords extends Work {
+	keywords?: string[]
 }
 
-export const WorkExperience: FC<WorkExperienceProps> = ({ work }) => {
+interface WorkSectionProps {
+	work?: WorkWithKeywords[]
+}
+
+export const WorkSection: FC<WorkSectionProps> = ({ work }) => {
 	if (!work || work.length === 0) return null
 
 	return (
