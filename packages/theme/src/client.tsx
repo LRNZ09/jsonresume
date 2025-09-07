@@ -6,11 +6,12 @@
  */
 
 import { createRoot } from 'react-dom/client'
-import { App } from './App'
+import { Resume } from './components/resume'
+import resumeData from './resume.json'
 
 function start() {
 	const root = createRoot(document.getElementById('root')!)
-	root.render(<App />)
+	root.render(<Resume data={resumeData} />)
 }
 
 if (document.readyState === 'loading') {

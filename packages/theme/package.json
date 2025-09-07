@@ -4,9 +4,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "bun run build.ts",
-		"dev": "bun --hot src/index.tsx",
-		"start": "NODE_ENV=production bun src/index.tsx"
+		"dev": "bun --hot src/server.tsx",
+		"start": "NODE_ENV=production bun src/server.tsx"
 	},
 	"dependencies": {
 		"bun-plugin-tailwind": "catalog:dependencies",
