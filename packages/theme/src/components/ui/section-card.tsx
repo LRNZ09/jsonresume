@@ -1,11 +1,11 @@
-import { type FC, memo, type ReactNode } from 'react'
+import { ArrowSquareOutIcon, MapPinIcon } from '@phosphor-icons/react'
+import type { FC, ReactNode } from 'react'
 import { useTranslations } from 'use-intl'
-import { borders, colors, spacing, typography } from '../../lib/styleTokens'
 import { cn } from '../../lib/cn'
+import { borders, colors, spacing, typography } from '../../lib/styleTokens'
 import { Markdown } from './markdown'
 import { Tag } from './tag'
 import { TagList } from './tag-list'
-import { ArrowSquareOutIcon, MapPinIcon } from '@phosphor-icons/react'
 
 interface SectionCardProps {
 	title?: string
@@ -24,151 +24,149 @@ interface SectionCardProps {
 	actionLabelKey?: string
 }
 
-export const SectionCard: FC<SectionCardProps> = memo(
-	({
-		title,
-		subtitle,
-		url,
-		location,
-		date,
-		tags,
-		highlightTitle,
-		highlights,
-		summary,
-		children,
-		className,
-		id,
-		actionUrl,
-		actionLabelKey,
-	}) => {
-		const t = useTranslations()
+export const SectionCard: FC<SectionCardProps> = ({
+	title,
+	subtitle,
+	url,
+	location,
+	date,
+	tags,
+	highlightTitle,
+	highlights,
+	summary,
+	children,
+	className,
+	id,
+	actionUrl,
+	actionLabelKey,
+}) => {
+	const t = useTranslations()
 
-		const cardId = id ? `card-${id}` : undefined
-		const titleId = title ? `title-${cardId}` : undefined
-		const summaryId = summary ? `summary-${cardId}` : undefined
-		const highlightsId = highlights?.length ? `highlights-${cardId}` : undefined
+	const cardId = id ? `card-${id}` : undefined
+	const titleId = title ? `title-${cardId}` : undefined
+	const summaryId = summary ? `summary-${cardId}` : undefined
+	const highlightsId = highlights?.length ? `highlights-${cardId}` : undefined
 
-		return (
+	return (
+		<div
+			className={cn(
+				`${spacing.card.padding.default} ${borders.radius.lg} ${spacing.card.margin.default} ${colors.bg.card}`,
+				'border border-transparent transition-shadow hover:shadow-sm hover:border-color',
+				'print:bg-transparent print:hover:border-transparent print:hover:shadow-none print:p-0',
+				className,
+			)}
+			role='article'
+			id={cardId}
+			aria-labelledby={titleId}
+			aria-describedby={
+				[summaryId, highlightsId].filter(Boolean).join(' ') || undefined
+			}
+		>
 			<div
-				className={cn(
-					`${spacing.card.padding.default} ${borders.radius.lg} ${spacing.card.margin.default} ${colors.bg.card}`,
-					'border border-transparent transition-shadow hover:shadow-sm hover:border-color',
-					'print:bg-transparent print:hover:border-transparent print:hover:shadow-none print:p-0',
-					className,
-				)}
-				role='article'
-				id={cardId}
-				aria-labelledby={titleId}
-				aria-describedby={
-					[summaryId, highlightsId].filter(Boolean).join(' ') || undefined
-				}
+				className={`flex flex-col ${spacing.card.gap.default} ${spacing.card.gap.print}`}
 			>
-				<div
-					className={`flex flex-col ${spacing.card.gap.default} ${spacing.card.gap.print}`}
-				>
-					{title && (
-						<div>
-							<h3
-								id={titleId}
-								className={`${typography.weight.medium} ${typography.size.base}`}
-							>
-								{title}
-								{subtitle && (
-									<span className={typography.color.secondary}>
-										{` ${t('common.at', 'at')} `}
-										{url ? (
-											<a
-												href={url}
-												target='_blank'
-												rel='noopener noreferrer'
-												className={typography.color.brand + ' hover:underline'}
-											>
-												{subtitle}
-											</a>
-										) : (
-											subtitle
-										)}
-									</span>
-								)}
-							</h3>
+				{title && (
+					<div>
+						<h3
+							id={titleId}
+							className={`${typography.weight.medium} ${typography.size.base}`}
+						>
+							{title}
+							{subtitle && (
+								<span className={typography.color.secondary}>
+									{` ${t('common.at', 'at')} `}
+									{url ? (
+										<a
+											href={url}
+											target='_blank'
+											rel='noopener noreferrer'
+											className={typography.color.brand + ' hover:underline'}
+										>
+											{subtitle}
+										</a>
+									) : (
+										subtitle
+									)}
+								</span>
+							)}
+						</h3>
+					</div>
+				)}
+
+				<div className='flex flex-wrap items-center gap-1 print:gap-0.5'>
+					{location && (
+						<div
+							className={`flex items-center ${typography.size.sm} ${typography.color.secondary} ${typography.size.print.sm}`}
+						>
+							<MapPinIcon className='w-3 h-3 mr-1' />
+							{location}
 						</div>
 					)}
-
-					<div className='flex flex-wrap items-center gap-1 print:gap-0.5'>
-						{location && (
-							<div
-								className={`flex items-center ${typography.size.sm} ${typography.color.secondary} ${typography.size.print.sm}`}
-							>
-								<MapPinIcon className='w-3 h-3 mr-1' />
-								{location}
-							</div>
-						)}
-						{date && (
-							<div
-								className={`${typography.size.sm} ${typography.color.secondary} ${typography.size.print.sm}`}
-							>
-								{location && <span className='mx-1 print:mx-0.5'>•</span>}
-								{date}
-							</div>
-						)}
-					</div>
-
-					{tags && tags.length > 0 && (
-						<TagList className='mt-1'>
-							{tags.map((tag, i) => (
-								<Tag key={i}>{tag}</Tag>
-							))}
-						</TagList>
-					)}
-
-					{summary && (
+					{date && (
 						<div
-							id={summaryId}
 							className={`${typography.size.sm} ${typography.color.secondary} ${typography.size.print.sm}`}
 						>
-							<Markdown content={summary} />
+							{location && <span className='mx-1 print:mx-0.5'>•</span>}
+							{date}
 						</div>
 					)}
-
-					{highlights && highlights.length > 0 && (
-						<div id={highlightsId} className='print:px-4'>
-							{highlightTitle && (
-								<div
-									className={`mb-1 ${typography.size.sm} ${typography.weight.medium} ${typography.size.print.sm} print:mb-0.5`}
-								>
-									{highlightTitle}
-								</div>
-							)}
-							<ul
-								className={cn(
-									`ml-4 ${typography.size.sm} list-disc ${typography.color.secondary}`,
-									`${typography.size.print.sm} print:ml-4 print:list-disc`,
-								)}
-							>
-								{highlights.map((highlight, i) => (
-									<li key={i}>
-										<Markdown content={highlight} />
-									</li>
-								))}
-							</ul>
-						</div>
-					)}
-
-					{actionUrl && actionLabelKey && (
-						<a
-							href={actionUrl}
-							target='_blank'
-							rel='noopener noreferrer'
-							className={`mt-1 inline-flex items-center ${typography.size.sm} ${typography.color.brand} hover:underline print:hidden`}
-						>
-							{t(actionLabelKey)}
-							<ArrowSquareOutIcon className='ml-1.5 h-3 w-3' />
-						</a>
-					)}
-
-					{children && <div className='mt-2 print:mt-0.5'>{children}</div>}
 				</div>
+
+				{tags && tags.length > 0 && (
+					<TagList className='mt-1'>
+						{tags.map((tag, i) => (
+							<Tag key={i}>{tag}</Tag>
+						))}
+					</TagList>
+				)}
+
+				{summary && (
+					<div
+						id={summaryId}
+						className={`${typography.size.sm} ${typography.color.secondary} ${typography.size.print.sm}`}
+					>
+						<Markdown content={summary} />
+					</div>
+				)}
+
+				{highlights && highlights.length > 0 && (
+					<div id={highlightsId} className='print:px-4'>
+						{highlightTitle && (
+							<div
+								className={`mb-1 ${typography.size.sm} ${typography.weight.medium} ${typography.size.print.sm} print:mb-0.5`}
+							>
+								{highlightTitle}
+							</div>
+						)}
+						<ul
+							className={cn(
+								`ml-4 ${typography.size.sm} list-disc ${typography.color.secondary}`,
+								`${typography.size.print.sm} print:ml-4 print:list-disc`,
+							)}
+						>
+							{highlights.map((highlight, i) => (
+								<li key={i}>
+									<Markdown content={highlight} />
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
+
+				{actionUrl && actionLabelKey && (
+					<a
+						href={actionUrl}
+						target='_blank'
+						rel='noopener noreferrer'
+						className={`mt-1 inline-flex items-center ${typography.size.sm} ${typography.color.brand} hover:underline print:hidden`}
+					>
+						{t(actionLabelKey)}
+						<ArrowSquareOutIcon className='ml-1.5 h-3 w-3' />
+					</a>
+				)}
+
+				{children && <div className='mt-2 print:mt-0.5'>{children}</div>}
 			</div>
-		)
-	},
-)
+		</div>
+	)
+}

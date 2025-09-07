@@ -1,6 +1,6 @@
+import { AtIcon, GlobeIcon, PhoneIcon } from '@phosphor-icons/react'
 import type { FC } from 'react'
 import { useTranslations } from 'use-intl'
-import { AtIcon, GlobeIcon, PhoneIcon } from '@phosphor-icons/react'
 
 interface ContactInfoProps {
 	email?: string

@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import type { Resume } from '#/types/resume'
 import { AwardsSection } from './awards'
 import { CertificatesSection } from './certificates'
 import { EducationSection } from './education'
@@ -11,13 +12,12 @@ import { ReferencesSection } from './references'
 import { SkillsSection } from './skills'
 import { VolunteerSection } from './volunteer'
 import { WorkSection } from './work-experience'
-import type { Resume } from '#/types/resume'
 
-interface ResumeProps {
+interface ResumeSectionsProps {
 	resume: Resume
 }
 
-export const ResumeSections: FC<ResumeProps> = ({ resume }) => {
+export const ResumeSections: FC<ResumeSectionsProps> = ({ resume }) => {
 	const {
 		basics,
 		work,

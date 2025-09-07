@@ -1,6 +1,6 @@
 import type React from 'react'
-import { SidebarSection } from './ui/sidebar-section'
 import type { Language } from '#/types/resume'
+import { SidebarSection } from './ui/sidebar-section'
 
 interface LanguagesProps {
 	languages: Language[]

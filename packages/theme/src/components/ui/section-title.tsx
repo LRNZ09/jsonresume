@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react'
 import { useTranslations } from 'use-intl'
-import { colors } from '../../lib/styleTokens'
 import { cn } from '../../lib/cn'
+import { colors } from '../../lib/styleTokens'
 
 interface SectionTitleProps {
 	children?: ReactNode

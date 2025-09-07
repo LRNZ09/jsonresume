@@ -1,15 +1,15 @@
-import { type FC, memo } from 'react'
+import { HouseLineIcon } from '@phosphor-icons/react'
+import type { FC } from 'react'
+import type { Basics } from '#/types/resume'
 import { Summary } from './summary'
 import { ContactInfo } from './ui/contact-info'
 import { SocialProfiles } from './ui/social-profiles'
-import { HouseLineIcon } from '@phosphor-icons/react'
-import type { Basics } from '#/types/resume'
 
 interface HeaderProps {
 	basics: Basics
 }
 
-export const Header: FC<HeaderProps> = memo(({ basics }) => {
+export const Header: FC<HeaderProps> = ({ basics }) => {
 	const { name, label, email, phone, url, profiles, location, summary, image } =
 		basics
 
@@ -67,4 +67,4 @@ export const Header: FC<HeaderProps> = memo(({ basics }) => {
 			</div>
 		</header>
 	)
-})
+}

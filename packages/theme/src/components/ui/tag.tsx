@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
-import { borders, colors, typography } from '../../lib/styleTokens'
 import { cn } from '../../lib/cn'
+import { borders, colors, typography } from '../../lib/styleTokens'
 
 interface TagProps {
 	children: ReactNode

@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import type { Interest } from '#/types/resume'
 import { SidebarSection } from './ui/sidebar-section'
 import { Tag } from './ui/tag'
 import { TagList } from './ui/tag-list'
-import type { Interest } from '#/types/resume'
 
 interface InterestsProps {
 	interests?: Interest[]

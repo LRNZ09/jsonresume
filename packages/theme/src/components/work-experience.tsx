@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import type { Work } from '#/types/resume'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
-import type { Work } from '#/types/resume'
 
 interface WorkWithKeywords extends Work {
 	keywords?: string[]

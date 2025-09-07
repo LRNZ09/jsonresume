@@ -1,9 +1,9 @@
+import { TrophyIcon } from '@phosphor-icons/react'
 import type React from 'react'
 import { useFormatter, useTranslations } from 'use-intl'
+import type { Award } from '#/types/resume'
 import { SidebarCard } from './ui/sidebar-card'
 import { SidebarSection } from './ui/sidebar-section'
-import { TrophyIcon } from '@phosphor-icons/react'
-import type { Award } from '#/types/resume'
 
 interface AwardsProps {
 	awards?: Award[]

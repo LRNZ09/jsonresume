@@ -1,9 +1,9 @@
+import { CertificateIcon } from '@phosphor-icons/react'
 import type React from 'react'
 import { useFormatter, useTranslations } from 'use-intl'
+import type { Certificate } from '#/types/resume'
 import { SidebarCard } from './ui/sidebar-card'
 import { SidebarSection } from './ui/sidebar-section'
-import { CertificateIcon } from '@phosphor-icons/react'
-import type { Certificate } from '#/types/resume'
 
 interface CertificatesProps {
 	certificates?: Certificate[]

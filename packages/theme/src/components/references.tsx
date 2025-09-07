@@ -1,7 +1,7 @@
 import type { FC } from 'react'
+import type { Reference } from '#/types/resume'
 import { SidebarCard } from './ui/sidebar-card'
 import { SidebarSection } from './ui/sidebar-section'
-import type { Reference } from '#/types/resume'
 
 interface ReferencesProps {
 	references?: Reference[]

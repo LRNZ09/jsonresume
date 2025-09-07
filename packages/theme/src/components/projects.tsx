@@ -1,8 +1,8 @@
 import type React from 'react'
+import type { Project } from '#/types/resume'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
-import type { Project } from '#/types/resume'
 
 interface ProjectsProps {
 	projects?: Project[]

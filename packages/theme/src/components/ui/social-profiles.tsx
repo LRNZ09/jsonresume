@@ -1,13 +1,13 @@
-import { type FC, memo } from 'react'
+import type { FC } from 'react'
 import { useTranslations } from 'use-intl'
-import { NetworkIcon } from './network-icon'
 import type { Basics } from '#/types/resume'
+import { NetworkIcon } from './network-icon'
 
 interface SocialProfilesProps {
 	profiles?: Basics['profiles']
 }
 
-export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
+export const SocialProfiles: FC<SocialProfilesProps> = ({ profiles }) => {
 	const t = useTranslations()
 
 	if (!profiles || profiles.length === 0) return null
@@ -35,4 +35,4 @@ export const SocialProfiles: FC<SocialProfilesProps> = memo(({ profiles }) => {
 			</div>
 		</div>
 	)
-})
+}

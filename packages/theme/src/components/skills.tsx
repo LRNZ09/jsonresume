@@ -1,8 +1,8 @@
 import type React from 'react'
+import type { Skill } from '#/types/resume'
 import { SidebarSection } from './ui/sidebar-section'
 import { Tag } from './ui/tag'
 import { TagList } from './ui/tag-list'
-import type { Skill } from '#/types/resume'
 
 interface SkillsProps {
 	skills: Skill[]

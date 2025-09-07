@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import type { Education } from '#/types/resume'
 import { SectionCard } from './ui/section-card'
 import { TimelineEntry } from './ui/timeline-entry'
 import { TimelineSection } from './ui/timeline-section'
-import type { Education } from '#/types/resume'
 
 interface EducationProps {
 	education?: Education[]

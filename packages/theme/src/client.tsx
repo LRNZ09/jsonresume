@@ -5,10 +5,10 @@
  * It is included in `src/index.html`.
  */
 
-import { createRoot } from 'react-dom/client'
-import resume from './resume.json'
 import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import { App } from './app'
+import resume from './resume.json'
 
 function start() {
 	const root = createRoot(document.getElementById('root')!)

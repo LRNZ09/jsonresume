@@ -1,9 +1,9 @@
-import type { FC } from 'react'
-import { ResumeSections } from '../components/resume'
-import { locales, type Locale } from '../i18n/config'
-import { IntlProvider } from 'use-intl'
 import { IconContext } from '@phosphor-icons/react'
+import type { FC } from 'react'
+import { IntlProvider } from 'use-intl'
 import type { Resume } from '#/types/resume'
+import { ResumeSections } from '../components/resume'
+import { type Locale, locales } from '../i18n/config'
 
 interface AppProps {
 	resume: Resume

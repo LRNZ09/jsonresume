@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react'
-import { spacing } from '../../lib/styleTokens'
 import { cn } from '../../lib/cn'
+import { spacing } from '../../lib/styleTokens'
 import { SectionTitle } from './section-title'
 
 interface SidebarSectionProps {
