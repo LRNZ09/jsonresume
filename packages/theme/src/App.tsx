@@ -1,4 +1,3 @@
-import { APITester } from './APITester'
 import './index.css'
 
 import logo from './logo.svg'
@@ -28,7 +27,6 @@ export function App() {
 				</code>{' '}
 				and save to test HMR
 			</p>
-			<APITester />
 		</div>
 	)
 }
