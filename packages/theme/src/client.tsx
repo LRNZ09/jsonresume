@@ -6,12 +6,17 @@
  */
 
 import { createRoot } from 'react-dom/client'
-import { Resume } from './components/resume'
-import resumeData from './resume.json'
+import resume from './resume.json'
+import { StrictMode } from 'react'
+import { App } from './app'
 
 function start() {
 	const root = createRoot(document.getElementById('root')!)
-	root.render(<Resume data={resumeData} />)
+	root.render(
+		<StrictMode>
+			<App resume={resume} />
+		</StrictMode>,
+	)
 }
 
 if (document.readyState === 'loading') {

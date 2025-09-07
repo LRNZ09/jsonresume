@@ -11,7 +11,8 @@
 		"bun-plugin-tailwind": "catalog:dependencies",
 		"react": "catalog:dependencies",
 		"react-dom": "catalog:dependencies",
-		"tailwindcss": "catalog:dependencies"
+		"tailwindcss": "catalog:dependencies",
+		"use-intl": "4.3.6"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "catalog:devDependencies",
