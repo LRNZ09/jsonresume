@@ -8,6 +8,7 @@
 		"start": "NODE_ENV=production bun src/server.tsx"
 	},
 	"dependencies": {
+		"@phosphor-icons/react": "2.1.10",
 		"bun-plugin-tailwind": "catalog:dependencies",
 		"react": "catalog:dependencies",
 		"react-dom": "catalog:dependencies",
