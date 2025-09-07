@@ -16,6 +16,7 @@
 		"react-dom": "catalog:dependencies",
 		"tailwind-merge": "3.3.1",
 		"tailwindcss": "catalog:dependencies",
+		"type-fest": "4.41.0",
 		"use-intl": "4.3.6"
 	},
 	"devDependencies": {
