@@ -11,6 +11,7 @@
 		"@phosphor-icons/react": "2.1.10",
 		"bun-plugin-tailwind": "catalog:dependencies",
 		"clsx": "2.1.1",
+		"date-fns": "4.1.0",
 		"react": "catalog:dependencies",
 		"react-dom": "catalog:dependencies",
 		"tailwind-merge": "3.3.1",
